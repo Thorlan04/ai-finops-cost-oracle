@@ -1,0 +1,275 @@
+{
+  "last_updated": "2026-10-18T12:00:00Z",
+  "source": "Verified Official Cloud & AI Documentation + LiteLLM Public Benchmark",
+  "currency": "USD",
+  "models": {
+    "openai/gpt-4o": {
+      "provider": "OpenAI",
+      "model_name": "GPT-4o (Omni)",
+      "input_cost_per_token": 0.0000025,
+      "output_cost_per_token": 0.00001,
+      "input_cost_per_million": 2.5,
+      "output_cost_per_million": 10.0,
+      "context_window": 128000,
+      "max_output_tokens": 16384,
+      "category": "flagship",
+      "description": "OpenAI flagship high-intelligence multimodal model for complex reasoning and enterprise tasks."
+    },
+    "openai/gpt-4o-mini": {
+      "provider": "OpenAI",
+      "model_name": "GPT-4o Mini",
+      "input_cost_per_token": 0.00000015,
+      "output_cost_per_token": 0.0000006,
+      "input_cost_per_million": 0.15,
+      "output_cost_per_million": 0.6,
+      "context_window": 128000,
+      "max_output_tokens": 16384,
+      "category": "cost_optimized",
+      "description": "Ultra low-cost, high-speed lightweight model replacing GPT-3.5 Turbo with superior benchmarks."
+    },
+    "openai/o1-preview": {
+      "provider": "OpenAI",
+      "model_name": "OpenAI o1-preview",
+      "input_cost_per_token": 0.000015,
+      "output_cost_per_token": 0.00006,
+      "input_cost_per_million": 15.0,
+      "output_cost_per_million": 60.0,
+      "context_window": 128000,
+      "max_output_tokens": 32768,
+      "category": "reasoning",
+      "description": "Advanced reasoning model using chain-of-thought tokens for science, math, and code architecture."
+    },
+    "openai/o1-mini": {
+      "provider": "OpenAI",
+      "model_name": "OpenAI o1-mini",
+      "input_cost_per_token": 0.000003,
+      "output_cost_per_token": 0.000012,
+      "input_cost_per_million": 3.0,
+      "output_cost_per_million": 12.0,
+      "context_window": 128000,
+      "max_output_tokens": 65536,
+      "category": "reasoning_light",
+      "description": "Cost-efficient reasoning model optimized for competitive programming and STEM."
+    },
+    "anthropic/claude-3-5-sonnet": {
+      "provider": "Anthropic",
+      "model_name": "Claude 3.5 Sonnet",
+      "input_cost_per_token": 0.000003,
+      "output_cost_per_token": 0.000015,
+      "input_cost_per_million": 3.0,
+      "output_cost_per_million": 15.0,
+      "context_window": 200000,
+      "max_output_tokens": 8192,
+      "category": "flagship",
+      "description": "Top-tier coding, system analysis, and visual understanding with 200k token context."
+    },
+    "anthropic/claude-3-5-haiku": {
+      "provider": "Anthropic",
+      "model_name": "Claude 3.5 Haiku",
+      "input_cost_per_token": 0.000001,
+      "output_cost_per_token": 0.000005,
+      "input_cost_per_million": 1.0,
+      "output_cost_per_million": 5.0,
+      "context_window": 200000,
+      "max_output_tokens": 8192,
+      "category": "cost_optimized",
+      "description": "Blazing fast execution with coding intelligence rivaling previous-generation frontier models."
+    },
+    "anthropic/claude-3-opus": {
+      "provider": "Anthropic",
+      "model_name": "Claude 3 Opus",
+      "input_cost_per_token": 0.000015,
+      "output_cost_per_token": 0.000075,
+      "input_cost_per_million": 15.0,
+      "output_cost_per_million": 75.0,
+      "context_window": 200000,
+      "max_output_tokens": 4096,
+      "category": "frontier_deep",
+      "description": "Deep qualitative nuance, academic synthesis, and complex enterprise documentation."
+    },
+    "google/gemini-1.5-pro": {
+      "provider": "Google",
+      "model_name": "Gemini 1.5 Pro",
+      "input_cost_per_token": 0.00000125,
+      "output_cost_per_token": 0.000005,
+      "input_cost_per_million": 1.25,
+      "output_cost_per_million": 5.0,
+      "context_window": 2000000,
+      "max_output_tokens": 8192,
+      "category": "flagship",
+      "description": "Massive 2 Million token context window for full-codebase ingest and hours of multi-modal audio/video."
+    },
+    "google/gemini-1.5-flash": {
+      "provider": "Google",
+      "model_name": "Gemini 1.5 Flash",
+      "input_cost_per_token": 0.000000075,
+      "output_cost_per_token": 0.0000003,
+      "input_cost_per_million": 0.075,
+      "output_cost_per_million": 0.3,
+      "context_window": 1000000,
+      "max_output_tokens": 8192,
+      "category": "cost_optimized",
+      "description": "High-frequency sub-second responses at fractional pricing ($0.075 / M input tokens)."
+    },
+    "deepseek/deepseek-chat": {
+      "provider": "DeepSeek",
+      "model_name": "DeepSeek V3 (Chat)",
+      "input_cost_per_token": 0.00000014,
+      "output_cost_per_token": 0.00000028,
+      "input_cost_per_million": 0.14,
+      "output_cost_per_million": 0.28,
+      "context_window": 64000,
+      "max_output_tokens": 8192,
+      "category": "hyper_efficient",
+      "description": "Open-weights Mixture-of-Experts architecture delivering GPT-4o parity at 95% discount."
+    },
+    "deepseek/deepseek-reasoner": {
+      "provider": "DeepSeek",
+      "model_name": "DeepSeek R1 (Reasoner)",
+      "input_cost_per_token": 0.00000055,
+      "output_cost_per_token": 0.00000219,
+      "input_cost_per_million": 0.55,
+      "output_cost_per_million": 2.19,
+      "context_window": 64000,
+      "max_output_tokens": 8192,
+      "category": "reasoning_open",
+      "description": "State-of-the-art open reasoning model matching OpenAI o1 at a fraction of the cost."
+    },
+    "mistral/mistral-large": {
+      "provider": "Mistral AI",
+      "model_name": "Mistral Large 2",
+      "input_cost_per_token": 0.000002,
+      "output_cost_per_token": 0.000006,
+      "input_cost_per_million": 2.0,
+      "output_cost_per_million": 6.0,
+      "context_window": 128000,
+      "max_output_tokens": 8192,
+      "category": "flagship",
+      "description": "European sovereign enterprise model with state-of-the-art multilingual and code synthesis."
+    },
+    "mistral/codestral": {
+      "provider": "Mistral AI",
+      "model_name": "Codestral",
+      "input_cost_per_token": 0.0000002,
+      "output_cost_per_token": 0.0000006,
+      "input_cost_per_million": 0.2,
+      "output_cost_per_million": 0.6,
+      "context_window": 32000,
+      "max_output_tokens": 8192,
+      "category": "code_specialist",
+      "description": "Specialized generative coding and fill-in-the-middle completion model supporting 80+ programming languages."
+    },
+    "meta/llama-3.3-70b-instruct": {
+      "provider": "Meta (via Groq / Together / DeepInfra)",
+      "model_name": "Llama 3.3 70B Instruct",
+      "input_cost_per_token": 0.00000059,
+      "output_cost_per_token": 0.00000079,
+      "input_cost_per_million": 0.59,
+      "output_cost_per_million": 0.79,
+      "context_window": 128000,
+      "max_output_tokens": 4096,
+      "category": "open_source_cloud",
+      "description": "Top-performing open source weights model with 70B parameters offering 405B level capabilities."
+    },
+    "cohere/command-r-plus": {
+      "provider": "Cohere",
+      "model_name": "Command R+",
+      "input_cost_per_token": 0.0000025,
+      "output_cost_per_token": 0.00001,
+      "input_cost_per_million": 2.5,
+      "output_cost_per_million": 10.0,
+      "context_window": 128000,
+      "max_output_tokens": 4096,
+      "category": "rag_specialist",
+      "description": "Optimized for enterprise search, tool execution, citations, and grounded multi-step workflows."
+    }
+  },
+  "automation_platforms": {
+    "zapier": {
+      "name": "Zapier (Cloud SaaS)",
+      "billing_model": "per_task_tiered",
+      "free_tier_ops": 100,
+      "plans": [
+        { "name": "Free", "monthly_price_usd": 0, "included_ops": 100, "overage_per_1000": 0 },
+        { "name": "Starter", "monthly_price_usd": 29.99, "included_ops": 750, "overage_per_1000": 45.0 },
+        { "name": "Professional", "monthly_price_usd": 73.50, "included_ops": 2000, "overage_per_1000": 38.0 },
+        { "name": "Team", "monthly_price_usd": 103.50, "included_ops": 2000, "overage_per_1000": 34.0 },
+        { "name": "High Volume 50k", "monthly_price_usd": 448.50, "included_ops": 50000, "overage_per_1000": 15.0 },
+        { "name": "Enterprise 100k", "monthly_price_usd": 898.00, "included_ops": 100000, "overage_per_1000": 12.0 }
+      ],
+      "average_cost_per_task_usd": 0.038,
+      "notes": "Premium proprietary pricing. Steep penalties on multi-step workflows where each step counts as 1 task."
+    },
+    "make": {
+      "name": "Make (formerly Integromat)",
+      "billing_model": "per_operation_tiered",
+      "free_tier_ops": 1000,
+      "plans": [
+        { "name": "Free", "monthly_price_usd": 0, "included_ops": 1000, "overage_per_1000": 0 },
+        { "name": "Core", "monthly_price_usd": 10.59, "included_ops": 10000, "overage_per_1000": 1.20 },
+        { "name": "Pro", "monthly_price_usd": 18.82, "included_ops": 10000, "overage_per_1000": 1.80 },
+        { "name": "Teams", "monthly_price_usd": 34.12, "included_ops": 10000, "overage_per_1000": 3.40 },
+        { "name": "Pro 50k", "monthly_price_usd": 68.00, "included_ops": 50000, "overage_per_1000": 1.36 },
+        { "name": "Pro 100k", "monthly_price_usd": 129.00, "included_ops": 100000, "overage_per_1000": 1.29 }
+      ],
+      "average_cost_per_task_usd": 0.0015,
+      "notes": "Cost-effective visual workflow editor. 60% to 80% cheaper than Zapier for high-volume routing."
+    },
+    "n8n_cloud": {
+      "name": "n8n (Managed Cloud)",
+      "billing_model": "per_workflow_execution",
+      "free_tier_ops": 0,
+      "plans": [
+        { "name": "Starter", "monthly_price_usd": 22.00, "included_executions": 2500, "overage_per_1000": 8.0 },
+        { "name": "Pro", "monthly_price_usd": 55.00, "included_executions": 10000, "overage_per_1000": 5.0 },
+        { "name": "Enterprise", "monthly_price_usd": 180.00, "included_executions": 50000, "overage_per_1000": 3.0 }
+      ],
+      "notes": "Billed per entire workflow execution rather than individual step operations. Massive efficiency for complex trees."
+    },
+    "n8n_self_hosted_hostinger": {
+      "name": "n8n Self-Hosted (Hostinger KVM2 VPS)",
+      "billing_model": "fixed_infrastructure",
+      "monthly_price_usd": 7.50,
+      "monthly_price_eur": 6.99,
+      "included_ops": 10000000,
+      "vps_specs": "2 vCPU, 8 GB RAM, 100 GB NVMe, 8 TB Bandwidth, Docker Containerized",
+      "notes": "100% Unlimited task execution. Total cost remains constant regardless of 10k or 1,000k tasks/month."
+    },
+    "n8n_self_hosted_digitalocean": {
+      "name": "n8n Self-Hosted (DigitalOcean Basic Droplet)",
+      "billing_model": "fixed_infrastructure",
+      "monthly_price_usd": 12.00,
+      "monthly_price_eur": 11.10,
+      "included_ops": 10000000,
+      "vps_specs": "2 vCPU, 2 GB RAM, 60 GB SSD, 3 TB Bandwidth, 1-Click Docker Marketplace",
+      "notes": "Enterprise SLA uptime, 1-click Docker marketplace deploy, unlimited workflow executions."
+    }
+  },
+  "vector_databases": {
+    "supabase": {
+      "name": "Supabase pgvector (PostgreSQL)",
+      "free_tier_vectors": 50000,
+      "pro_plan_monthly_usd": 25.0,
+      "included_storage_gb": 8,
+      "included_bandwidth_gb": 250,
+      "overage_storage_per_gb_usd": 0.125,
+      "read_query_cost_per_million_usd": 0.0,
+      "notes": "Relational data + pgvector in one place. Predictable flat compute tiers without per-read microcharges."
+    },
+    "pinecone": {
+      "name": "Pinecone Serverless",
+      "free_tier_vectors": 100000,
+      "base_fee_monthly_usd": 0.0,
+      "read_unit_cost_per_million_usd": 0.25,
+      "write_unit_cost_per_million_usd": 0.75,
+      "storage_per_gb_monthly_usd": 0.33,
+      "notes": "Pure serverless vector index. Pay-as-you-go per Read/Write unit, ideal for bursty sparse query traffic."
+    },
+    "qdrant_cloud": {
+      "name": "Qdrant Cloud Managed",
+      "free_tier_vectors": 100000,
+      "cluster_base_monthly_usd": 25.0,
+      "notes": "High performance Rust-based vector engine with payload filtering and hybrid search."
+    }
+  }
+}

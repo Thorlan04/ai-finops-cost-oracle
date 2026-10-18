@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Homepage Hero -->
+<section class="hero">
+  <div class="hero-badge">⚡ {{ hero_badge_text }}</div>
+  <h1>{{ hero_h1_prefix }} <span class="highlight">{{ hero_h1_highlight }}</span> {{ hero_h1_suffix }}</h1>
+  <p>{{ hero_p_text }}</p>
+</section>
+
+<!-- Embedded Real-time Interactive Simulator -->
+{% include "finops_simulator.html" %}
+
+<!-- High-Intent B2B Calculators Grid -->
+<section class="content-section">
+  <h2 style="font-size: 1.8rem; margin-bottom: 20px; text-align: center;">{{ t_calculators_hub_title }}</h2>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: 40px;">
+    
+    <div class="editorial-card" style="border-top: 4px solid var(--accent-blue);">
+      <h3 style="font-size: 1.25rem; color: #fff; margin-top: 0;">Claude 3.5 vs GPT-4o vs Gemini</h3>
+      <p style="font-size: 0.9rem; color: var(--text-muted); min-height: 60px;">
+        {{ card_llm_desc }}
+      </p>
+      <a href="{{ base_url }}/{{ lang }}/claude-vs-gpt-vs-gemini-pricing-calculator.html" class="btn-action-sm" style="width: 100%; text-align: center; box-sizing: border-box;">
+        {{ t_open_calculator }} &rarr;
+      </a>
+    </div>
+
+    <div class="editorial-card" style="border-top: 4px solid var(--accent-green);">
+      <h3 style="font-size: 1.25rem; color: #fff; margin-top: 0;">Zapier vs Make vs Self-Hosted n8n</h3>
+      <p style="font-size: 0.9rem; color: var(--text-muted); min-height: 60px;">
+        {{ card_automation_desc }}
+      </p>
+      <a href="{{ base_url }}/{{ lang }}/zapier-vs-make-vs-n8n-cost-arbitrage.html" class="btn-action-sm" style="width: 100%; text-align: center; box-sizing: border-box;">
+        {{ t_open_calculator }} &rarr;
+      </a>
+    </div>
+
+    <div class="editorial-card" style="border-top: 4px solid var(--accent-purple);">
+      <h3 style="font-size: 1.25rem; color: #fff; margin-top: 0;">DeepSeek R1 vs OpenAI o1</h3>
+      <p style="font-size: 0.9rem; color: var(--text-muted); min-height: 60px;">
+        {{ card_reasoning_desc }}
+      </p>
+      <a href="{{ base_url }}/{{ lang }}/deepseek-r1-vs-openai-o1-cost-savings.html" class="btn-action-sm" style="width: 100%; text-align: center; box-sizing: border-box;">
+        {{ t_open_calculator }} &rarr;
+      </a>
+    </div>
+
+    <div class="editorial-card" style="border-top: 4px solid var(--gold);">
+      <h3 style="font-size: 1.25rem; color: #fff; margin-top: 0;">Vector DB: Supabase vs Pinecone</h3>
+      <p style="font-size: 0.9rem; color: var(--text-muted); min-height: 60px;">
+        {{ card_rag_desc }}
+      </p>
+      <a href="{{ base_url }}/{{ lang }}/rag-vector-database-supabase-vs-pinecone.html" class="btn-action-sm" style="width: 100%; text-align: center; box-sizing: border-box;">
+        {{ t_open_calculator }} &rarr;
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Engineering & FinOps Methodology -->
+  <div class="editorial-card">
+    <h2>{{ section_methodology_title }}</h2>
+    <p>{{ section_methodology_body }}</p>
+    <ul>
+      <li><strong>0 € Synchronisation Stack:</strong> {{ meth_bullet_1 }}</li>
+      <li><strong>Token Economics:</strong> {{ meth_bullet_2 }}</li>
+      <li><strong>Autonomous Hosting:</strong> {{ meth_bullet_3 }}</li>
+      <li><strong>Zero-Lockin Standards:</strong> {{ meth_bullet_4 }}</li>
+    </ul>
+  </div>
+</section>
+{% endblock %}

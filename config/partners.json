@@ -1,0 +1,112 @@
+{
+  "meta": {
+    "description": "Central configuration for B2B partner links, affiliate tracking parameters, and commercial arbitrage redirects.",
+    "updated_at": "2026-10-18T12:00:00Z"
+  },
+  "platforms": {
+    "partnerstack": {
+      "company": "PartnerStack",
+      "payout_rail": "Stripe Direct / SEPA Wire Transfer",
+      "status": "active"
+    },
+    "impact": {
+      "company": "Impact Radius",
+      "payout_rail": "SEPA Direct Bank Transfer (IBAN)",
+      "status": "active"
+    }
+  },
+  "partners": {
+    "n8n": {
+      "name": "n8n (Fair-code Workflow Automation)",
+      "category": "automation",
+      "affiliate_url": "https://n8n.partnerlinks.io/ai-finops",
+      "self_hosted_guide_url": "https://docs.n8n.io/hosting/",
+      "badge": "Recommended for High Volume",
+      "cta_text": "Deploy n8n Automation Engine"
+    },
+    "hostinger": {
+      "name": "Hostinger Cloud VPS",
+      "category": "hosting",
+      "affiliate_url": "https://www.hostinger.com/vps-hosting?ref=aifinops",
+      "badge": "Best Value VPS for n8n (~6.99€/mo)",
+      "cta_text": "Launch Hostinger KVM2 VPS"
+    },
+    "digitalocean": {
+      "name": "DigitalOcean Droplets & GPUs",
+      "category": "hosting",
+      "affiliate_url": "https://m.do.co/c/aifinops-droplet",
+      "badge": "Enterprise Developer VPS ($200 Credit)",
+      "cta_text": "Start on DigitalOcean"
+    },
+    "make": {
+      "name": "Make (formerly Integromat)",
+      "category": "automation",
+      "affiliate_url": "https://www.make.com/en/register?pc=aifinops",
+      "badge": "Best Managed Automation SaaS",
+      "cta_text": "Try Make with 10k Ops Free"
+    },
+    "zapier": {
+      "name": "Zapier",
+      "category": "automation",
+      "affiliate_url": "https://zapier.com/",
+      "badge": "Legacy Premium SaaS",
+      "cta_text": "Compare Zapier Plans"
+    },
+    "supabase": {
+      "name": "Supabase (Postgres & pgvector)",
+      "category": "database",
+      "affiliate_url": "https://supabase.com/?utm_source=ai-finops-oracle",
+      "badge": "Top Open-Source Vector DB",
+      "cta_text": "Deploy Supabase Vector Instance"
+    },
+    "pinecone": {
+      "name": "Pinecone Vector Database",
+      "category": "database",
+      "affiliate_url": "https://www.pinecone.io/",
+      "badge": "Specialized Serverless Vectors",
+      "cta_text": "Explore Pinecone Serverless"
+    },
+    "elevenlabs": {
+      "name": "ElevenLabs Voice & Audio AI",
+      "category": "voice_ai",
+      "affiliate_url": "https://elevenlabs.io/?from=aifinops",
+      "badge": "State-of-the-art TTS",
+      "cta_text": "Explore ElevenLabs API"
+    },
+    "openai": {
+      "name": "OpenAI API",
+      "category": "llm",
+      "url": "https://platform.openai.com/signup",
+      "badge": "Frontier Models",
+      "cta_text": "OpenAI Console"
+    },
+    "anthropic": {
+      "name": "Anthropic Claude API",
+      "category": "llm",
+      "url": "https://console.anthropic.com/",
+      "badge": "State of the Art Reasoning & Coding",
+      "cta_text": "Anthropic Console"
+    },
+    "deepseek": {
+      "name": "DeepSeek Open Platform",
+      "category": "llm",
+      "url": "https://platform.deepseek.com/",
+      "badge": "Extreme Token Efficiency (95%+ Cheaper)",
+      "cta_text": "Access DeepSeek API"
+    },
+    "google_cloud": {
+      "name": "Google Cloud Gemini",
+      "category": "llm",
+      "url": "https://ai.google.dev/",
+      "badge": "2M Token Context Window",
+      "cta_text": "Google AI Studio"
+    },
+    "mistral": {
+      "name": "Mistral AI",
+      "category": "llm",
+      "url": "https://console.mistral.ai/",
+      "badge": "European Sovereign AI",
+      "cta_text": "La Plateforme Mistral"
+    }
+  }
+}

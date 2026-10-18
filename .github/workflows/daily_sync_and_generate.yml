@@ -1,0 +1,51 @@
+name: Autonomous 24h FinOps Pricing Sync & Multilingual Build
+
+on:
+  schedule:
+    # Runs automatically every 6 hours (00:00, 06:00, 12:00, 18:00 UTC)
+    - cron: '0 */6 * * *'
+  push:
+    branches:
+      - main
+      - master
+  workflow_dispatch: # Allows manual trigger from GitHub UI
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages-sync"
+  cancel-in-progress: false
+
+jobs:
+  build-and-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+      - name: Run Master Build Orchestrator
+        run: |
+          python build.py
+
+      - name: Commit and Push Updated Pricing & Static Pages
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "AI FinOps Autonomous Bot"
+          git add docs/ data/
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore(sync): automated 24h pricing sync and multilingual rebuild [skip ci]" && git push)

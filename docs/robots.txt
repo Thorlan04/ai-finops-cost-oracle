@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://Thorlan04.github.io/ai-finops-cost-oracle/sitemap.xml

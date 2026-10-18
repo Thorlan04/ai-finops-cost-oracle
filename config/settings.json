@@ -1,0 +1,21 @@
+{
+  "site_name": "AI FinOps Cost Oracle",
+  "site_tagline": "Real-time Mathematical AI Token & Automation Cloud Arbitrage Engine",
+  "base_url": "https://Thorlan04.github.io/ai-finops-cost-oracle",
+  "repo_url": "https://github.com/Thorlan04/ai-finops-cost-oracle",
+  "author": "FinOps AI Engineering Collective",
+  "contact_email": "finops@ai-finops-cost-oracle.internal",
+  "default_currency": "USD",
+  "eur_usd_rate": 1.08,
+  "languages": ["en", "fr", "de", "es", "it", "pt", "nl", "ja"],
+  "default_language": "en",
+  "litellm_pricing_url": "https://raw.githubusercontent.com/BerriAI/litellm/main/model_prices_and_context_window.json",
+  "output_dir": "docs",
+  "sync_interval_hours": 6,
+  "cache_duration_hours": 24,
+  "seo": {
+    "twitter_handle": "@AIFinOpsOracle",
+    "theme_color": "#0f172a",
+    "generator": "AI FinOps Static Agent v1.0"
+  }
+}

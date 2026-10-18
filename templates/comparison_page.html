@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Comparison Page Hero -->
+<section class="hero">
+  <div class="hero-badge">{{ topic_badge }}</div>
+  <h1>{{ hero_title_prefix }} <span class="highlight">{{ hero_title_highlight }}</span> {{ hero_title_suffix }}</h1>
+  <p>{{ hero_subtitle }}</p>
+</section>
+
+<!-- Interactive Real-time FinOps Simulator -->
+{% include "finops_simulator.html" %}
+
+<!-- In-Depth Technical Arbitrage & FinOps Blueprint -->
+<section class="content-section">
+  <div class="editorial-card">
+    <h2>{{ section_architecture_title }}</h2>
+    <p>{{ section_architecture_lead }}</p>
+    <ul>
+      {% for point in architecture_bullets %}
+      <li>{{ point }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+
+  <div class="editorial-card">
+    <h2>{{ section_math_title }}</h2>
+    <p>{{ section_math_explanation }}</p>
+    <div style="background:#0a0f1d; padding: 18px; border-radius: 8px; border-left: 4px solid var(--accent-blue); font-family: monospace; font-size: 0.85rem; margin: 16px 0;">
+      <code>{{ math_formula_text }}</code>
+    </div>
+  </div>
+
+  <div class="editorial-card">
+    <h2>{{ section_recommendation_title }}</h2>
+    <p>{{ section_recommendation_body }}</p>
+    <div style="margin-top: 20px; display: flex; gap: 14px; flex-wrap: wrap;">
+      <a href="{{ primary_cta_url }}" target="_blank" rel="noopener noreferrer" class="btn-arbitrage" style="font-size: 0.95rem; padding: 12px 20px;">
+        {{ primary_cta_text }} &rarr;
+      </a>
+      <a href="{{ secondary_cta_url }}" target="_blank" rel="noopener noreferrer" class="btn-action-sm" style="font-size: 0.95rem; padding: 12px 20px; align-self: center;">
+        {{ secondary_cta_text }} &rarr;
+      </a>
+    </div>
+  </div>
+
+  <!-- FAQ Section with Schema.org FAQPage -->
+  <div class="editorial-card">
+    <h2>{{ section_faq_title }}</h2>
+    {% for faq in faqs %}
+    <div style="margin-bottom: 18px; border-bottom: 1px solid #1f293d; padding-bottom: 14px;">
+      <h3 style="color: #38bdf8; font-size: 1.05rem; margin-bottom: 6px;">{{ faq.q }}</h3>
+      <p style="margin: 0; color: #cbd5e1;">{{ faq.a }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- Schema.org FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for faq in faqs %}
+    {
+      "@type": "Question",
+      "name": "{{ faq.q }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "{{ faq.a }}"
+      }
+    }{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endblock %}

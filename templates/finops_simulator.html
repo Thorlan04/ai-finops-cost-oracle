@@ -1,0 +1,133 @@
+<!-- AI FinOps Real-time Interactive Simulator Component -->
+<section id="finops-simulator" class="simulator-card">
+  <div class="sim-header">
+    <div class="badge-live"><span class="pulse-dot"></span> {{ t_live_engine }}</div>
+    <h2>{{ t_sim_title }}</h2>
+    <p class="sim-subtitle">{{ t_sim_desc }}</p>
+  </div>
+
+  <!-- Currency & Quick Presets -->
+  <div class="sim-controls-bar">
+    <div class="currency-toggle">
+      <span class="ctrl-label">{{ t_currency }}:</span>
+      <button type="button" class="curr-btn active" data-curr="USD" onclick="setCurrency('USD')">$ USD</button>
+      <button type="button" class="curr-btn" data-curr="EUR" onclick="setCurrency('EUR')">€ EUR</button>
+    </div>
+    <div class="presets-bar">
+      <span class="ctrl-label">{{ t_presets }}:</span>
+      <button type="button" class="preset-btn" onclick="applyPreset(1000, 800, 250, 5000)">{{ t_preset_startup }} (1k/d)</button>
+      <button type="button" class="preset-btn" onclick="applyPreset(10000, 1200, 350, 50000)">{{ t_preset_growth }} (10k/d)</button>
+      <button type="button" class="preset-btn" onclick="applyPreset(100000, 2000, 500, 250000)">{{ t_preset_scale }} (100k/d)</button>
+    </div>
+  </div>
+
+  <!-- Sliders Grid -->
+  <div class="sliders-grid">
+    <div class="slider-box">
+      <div class="slider-info">
+        <label for="slider-requests">{{ t_daily_requests }}</label>
+        <span class="slider-val" id="val-requests">10,000</span>
+      </div>
+      <input type="range" id="slider-requests" min="100" max="250000" step="100" value="10000" oninput="updateSim()">
+      <div class="slider-scale"><span>100</span><span>50k</span><span>100k</span><span>250k</span></div>
+    </div>
+
+    <div class="slider-box">
+      <div class="slider-info">
+        <label for="slider-input-tokens">{{ t_avg_input_tokens }}</label>
+        <span class="slider-val" id="val-input-tokens">1,000</span>
+      </div>
+      <input type="range" id="slider-input-tokens" min="50" max="10000" step="50" value="1000" oninput="updateSim()">
+      <div class="slider-scale"><span>50</span><span>2,000</span><span>5,000</span><span>10,000</span></div>
+    </div>
+
+    <div class="slider-box">
+      <div class="slider-info">
+        <label for="slider-output-tokens">{{ t_avg_output_tokens }}</label>
+        <span class="slider-val" id="val-output-tokens">300</span>
+      </div>
+      <input type="range" id="slider-output-tokens" min="50" max="5000" step="50" value="300" oninput="updateSim()">
+      <div class="slider-scale"><span>50</span><span>1,000</span><span>2,500</span><span>5,000</span></div>
+    </div>
+
+    <div class="slider-box">
+      <div class="slider-info">
+        <label for="slider-ops">{{ t_monthly_ops }}</label>
+        <span class="slider-val" id="val-ops">50,000</span>
+      </div>
+      <input type="range" id="slider-ops" min="500" max="500000" step="500" value="50000" oninput="updateSim()">
+      <div class="slider-scale"><span>500</span><span>50k</span><span>200k</span><span>500k</span></div>
+    </div>
+  </div>
+
+  <!-- Dynamic Highlight Savings Banner -->
+  <div class="savings-banner" id="savings-banner">
+    <div class="savings-glow"></div>
+    <div class="savings-content">
+      <div class="savings-icon">⚡</div>
+      <div class="savings-text">
+        <div class="savings-title">{{ t_annual_savings_title }}:</div>
+        <div class="savings-amount" id="banner-savings-amount">$ 31,867 / {{ t_year }}</div>
+        <div class="savings-detail" id="banner-savings-detail">
+          {{ t_savings_subtext }}
+        </div>
+      </div>
+      <div class="savings-cta">
+        <a id="banner-cta-link" href="{{ partner_n8n_hostinger_url }}" target="_blank" rel="noopener noreferrer" class="btn-arbitrage">
+          {{ t_arbitrage_cta }} &rarr;
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Comparison Tables Tabs -->
+  <div class="tables-container">
+    <div class="tabs-header">
+      <button type="button" class="tab-btn active" onclick="switchTab('llm')">{{ t_tab_llm }}</button>
+      <button type="button" class="tab-btn" onclick="switchTab('automation')">{{ t_tab_automation }}</button>
+    </div>
+
+    <!-- LLM Cost Matrix Table -->
+    <div id="tab-llm" class="tab-pane active">
+      <div class="table-responsive">
+        <table class="finops-table">
+          <thead>
+            <tr>
+              <th>{{ t_col_model }}</th>
+              <th>{{ t_col_provider }}</th>
+              <th>{{ t_col_input_m }}</th>
+              <th>{{ t_col_output_m }}</th>
+              <th>{{ t_col_monthly_cost }}</th>
+              <th>{{ t_col_annual_cost }}</th>
+              <th>{{ t_col_arbitrage }}</th>
+            </tr>
+          </thead>
+          <tbody id="llm-table-body">
+            <!-- Rendered dynamically by simulator.js -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Automation Cost Matrix Table -->
+    <div id="tab-automation" class="tab-pane">
+      <div class="table-responsive">
+        <table class="finops-table">
+          <thead>
+            <tr>
+              <th>{{ t_col_solution }}</th>
+              <th>{{ t_col_type }}</th>
+              <th>{{ t_col_monthly_cost }}</th>
+              <th>{{ t_col_annual_cost }}</th>
+              <th>{{ t_col_delta }}</th>
+              <th>{{ t_col_action }}</th>
+            </tr>
+          </thead>
+          <tbody id="automation-table-body">
+            <!-- Rendered dynamically by simulator.js -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
