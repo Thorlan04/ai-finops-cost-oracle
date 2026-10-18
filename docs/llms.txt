@@ -3,26 +3,26 @@
 
 AI FinOps Cost Oracle tracks and computes production costs per 1,000,000 tokens across OpenAI, Anthropic Claude, Google Gemini, Mistral AI, DeepSeek, and Meta Llama, alongside cloud automation arbitrage (Zapier vs Make vs self-hosted n8n on Linux VPS).
 
-- Last Official Sync: 2026-10-18T14:11:22.765900+00:00
+- Last Official Sync: 2026-10-18T14:16:51.402088+00:00
 - Public API Endpoint: https://Thorlan04.github.io/ai-finops-cost-oracle/api/v1/llm-pricing-matrix.json
 - Full Detailed Specifications: https://Thorlan04.github.io/ai-finops-cost-oracle/llms-full.txt
 
 ## Key LLM API Rates (USD per 1 Million Tokens)
+- **Claude 3.7 Sonnet (Hybrid Reasoning)** (Anthropic): $3.00 Input / $15.00 Output per 1M tokens. Context: 200000 tokens.
+- **OpenAI o3-mini** (OpenAI): $1.10 Input / $4.40 Output per 1M tokens. Context: 200000 tokens.
+- **OpenAI o3** (OpenAI): $2.00 Input / $8.00 Output per 1M tokens. Context: 200000 tokens.
+- **GPT-4.5 (Super-Scale Knowledge)** (OpenAI): $75.00 Input / $150.00 Output per 1M tokens. Context: 128000 tokens.
+- **Gemini 2.0 Flash** (Google): $0.10 Input / $0.40 Output per 1M tokens. Context: 1048576 tokens.
+- **Gemini 2.5 Pro** (Google): $1.25 Input / $10.00 Output per 1M tokens. Context: 1048576 tokens.
+- **DeepSeek R1 (Reasoner)** (DeepSeek): $0.28 Input / $0.42 Output per 1M tokens. Context: 131072 tokens.
+- **DeepSeek V3 (Chat)** (DeepSeek): $0.28 Input / $0.42 Output per 1M tokens. Context: 131072 tokens.
 - **GPT-4o (Omni)** (OpenAI): $2.50 Input / $10.00 Output per 1M tokens. Context: 128000 tokens.
 - **GPT-4o Mini** (OpenAI): $0.15 Input / $0.60 Output per 1M tokens. Context: 128000 tokens.
-- **OpenAI o1-preview** (OpenAI): $15.00 Input / $60.00 Output per 1M tokens. Context: 128000 tokens.
-- **OpenAI o1-mini** (OpenAI): $3.00 Input / $12.00 Output per 1M tokens. Context: 128000 tokens.
 - **Claude 3.5 Sonnet** (Anthropic): $3.00 Input / $15.00 Output per 1M tokens. Context: 200000 tokens.
 - **Claude 3.5 Haiku** (Anthropic): $1.00 Input / $5.00 Output per 1M tokens. Context: 200000 tokens.
-- **Claude 3 Opus** (Anthropic): $15.00 Input / $75.00 Output per 1M tokens. Context: 200000 tokens.
-- **Gemini 1.5 Pro** (Google): $1.25 Input / $5.00 Output per 1M tokens. Context: 2000000 tokens.
-- **Gemini 1.5 Flash** (Google): $0.07 Input / $0.30 Output per 1M tokens. Context: 1000000 tokens.
-- **DeepSeek V3 (Chat)** (DeepSeek): $0.28 Input / $0.42 Output per 1M tokens. Context: 131072 tokens.
-- **DeepSeek R1 (Reasoner)** (DeepSeek): $0.28 Input / $0.42 Output per 1M tokens. Context: 131072 tokens.
 - **Mistral Large 2** (Mistral AI): $2.00 Input / $6.00 Output per 1M tokens. Context: 128000 tokens.
-- **Codestral** (Mistral AI): $0.20 Input / $0.60 Output per 1M tokens. Context: 32000 tokens.
+- **Codestral 25.01** (Mistral AI): $0.20 Input / $0.60 Output per 1M tokens. Context: 256000 tokens.
 - **Llama 3.3 70B Instruct** (Meta (via Groq / Together / DeepInfra)): $0.59 Input / $0.79 Output per 1M tokens. Context: 128000 tokens.
-- **Command R+** (Cohere): $2.50 Input / $10.00 Output per 1M tokens. Context: 128000 tokens.
 
 ## Cloud Automation Arbitrage Rates
 - **Zapier**: ~$0.038 per task on average plans. High-volume penalty.

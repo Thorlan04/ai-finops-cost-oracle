@@ -1,8 +1,104 @@
 {
-  "last_updated": "2026-10-18T12:00:00Z",
-  "source": "Verified Official Cloud & AI Documentation + LiteLLM Public Benchmark",
+  "last_updated": "2026-10-18T16:15:00Z",
+  "source": "Verified Official Cloud & AI Documentation + LiteLLM Public Benchmark (2025-2026 Frontier Models)",
   "currency": "USD",
   "models": {
+    "anthropic/claude-3-7-sonnet": {
+      "provider": "Anthropic",
+      "model_name": "Claude 3.7 Sonnet (Hybrid Reasoning)",
+      "input_cost_per_token": 0.000003,
+      "output_cost_per_token": 0.000015,
+      "input_cost_per_million": 3.0,
+      "output_cost_per_million": 15.0,
+      "context_window": 200000,
+      "max_output_tokens": 64000,
+      "category": "frontier_hybrid",
+      "description": "Anthropic frontier hybrid reasoning model combining instant execution with controllable extended thinking tokens."
+    },
+    "openai/o3-mini": {
+      "provider": "OpenAI",
+      "model_name": "OpenAI o3-mini",
+      "input_cost_per_token": 0.0000011,
+      "output_cost_per_token": 0.0000044,
+      "input_cost_per_million": 1.1,
+      "output_cost_per_million": 4.4,
+      "context_window": 200000,
+      "max_output_tokens": 100000,
+      "category": "reasoning_ultra",
+      "description": "Next-gen high-efficiency STEM and coding reasoning model replacing o1-mini at lower cost and higher speed."
+    },
+    "openai/o3": {
+      "provider": "OpenAI",
+      "model_name": "OpenAI o3",
+      "input_cost_per_token": 0.000002,
+      "output_cost_per_token": 0.000008,
+      "input_cost_per_million": 2.0,
+      "output_cost_per_million": 8.0,
+      "context_window": 200000,
+      "max_output_tokens": 100000,
+      "category": "reasoning_frontier",
+      "description": "State-of-the-art general reasoning model superseding o1-preview with superior agentic performance."
+    },
+    "openai/gpt-4-5": {
+      "provider": "OpenAI",
+      "model_name": "GPT-4.5 (Super-Scale Knowledge)",
+      "input_cost_per_token": 0.000075,
+      "output_cost_per_token": 0.00015,
+      "input_cost_per_million": 75.0,
+      "output_cost_per_million": 150.0,
+      "context_window": 128000,
+      "max_output_tokens": 16384,
+      "category": "massive_knowledge",
+      "description": "Colossal world knowledge and nuanced qualitative synthesis model for mission-critical enterprise decisions."
+    },
+    "google/gemini-2-0-flash": {
+      "provider": "Google",
+      "model_name": "Gemini 2.0 Flash",
+      "input_cost_per_token": 0.0000001,
+      "output_cost_per_token": 0.0000004,
+      "input_cost_per_million": 0.1,
+      "output_cost_per_million": 0.4,
+      "context_window": 1048576,
+      "max_output_tokens": 8192,
+      "category": "cost_optimized",
+      "description": "Second-generation multimodal foundation model with native tool execution and sub-second latency."
+    },
+    "google/gemini-2-5-pro": {
+      "provider": "Google",
+      "model_name": "Gemini 2.5 Pro",
+      "input_cost_per_token": 0.00000125,
+      "output_cost_per_token": 0.00001,
+      "input_cost_per_million": 1.25,
+      "output_cost_per_million": 10.0,
+      "context_window": 2000000,
+      "max_output_tokens": 16384,
+      "category": "flagship",
+      "description": "Advanced multi-modal reasoning with 2M token context, agentic planning, and codebase ingestion."
+    },
+    "deepseek/deepseek-reasoner": {
+      "provider": "DeepSeek",
+      "model_name": "DeepSeek R1 (Reasoner)",
+      "input_cost_per_token": 0.00000055,
+      "output_cost_per_token": 0.00000219,
+      "input_cost_per_million": 0.55,
+      "output_cost_per_million": 2.19,
+      "context_window": 131072,
+      "max_output_tokens": 8192,
+      "category": "reasoning_open",
+      "description": "Groundbreaking open reasoning model matching proprietary frontier reasoning at 90-96% lower cost."
+    },
+    "deepseek/deepseek-chat": {
+      "provider": "DeepSeek",
+      "model_name": "DeepSeek V3 (Chat)",
+      "input_cost_per_token": 0.00000014,
+      "output_cost_per_token": 0.00000028,
+      "input_cost_per_million": 0.14,
+      "output_cost_per_million": 0.28,
+      "context_window": 131072,
+      "max_output_tokens": 8192,
+      "category": "hyper_efficient",
+      "description": "671B MoE architecture delivering frontier coding and general reasoning at ultra-low price."
+    },
     "openai/gpt-4o": {
       "provider": "OpenAI",
       "model_name": "GPT-4o (Omni)",
@@ -13,7 +109,7 @@
       "context_window": 128000,
       "max_output_tokens": 16384,
       "category": "flagship",
-      "description": "OpenAI flagship high-intelligence multimodal model for complex reasoning and enterprise tasks."
+      "description": "OpenAI general multimodal workhorse model."
     },
     "openai/gpt-4o-mini": {
       "provider": "OpenAI",
@@ -25,31 +121,7 @@
       "context_window": 128000,
       "max_output_tokens": 16384,
       "category": "cost_optimized",
-      "description": "Ultra low-cost, high-speed lightweight model replacing GPT-3.5 Turbo with superior benchmarks."
-    },
-    "openai/o1-preview": {
-      "provider": "OpenAI",
-      "model_name": "OpenAI o1-preview",
-      "input_cost_per_token": 0.000015,
-      "output_cost_per_token": 0.00006,
-      "input_cost_per_million": 15.0,
-      "output_cost_per_million": 60.0,
-      "context_window": 128000,
-      "max_output_tokens": 32768,
-      "category": "reasoning",
-      "description": "Advanced reasoning model using chain-of-thought tokens for science, math, and code architecture."
-    },
-    "openai/o1-mini": {
-      "provider": "OpenAI",
-      "model_name": "OpenAI o1-mini",
-      "input_cost_per_token": 0.000003,
-      "output_cost_per_token": 0.000012,
-      "input_cost_per_million": 3.0,
-      "output_cost_per_million": 12.0,
-      "context_window": 128000,
-      "max_output_tokens": 65536,
-      "category": "reasoning_light",
-      "description": "Cost-efficient reasoning model optimized for competitive programming and STEM."
+      "description": "Fast, economical multimodal model for high-frequency routing."
     },
     "anthropic/claude-3-5-sonnet": {
       "provider": "Anthropic",
@@ -61,7 +133,7 @@
       "context_window": 200000,
       "max_output_tokens": 8192,
       "category": "flagship",
-      "description": "Top-tier coding, system analysis, and visual understanding with 200k token context."
+      "description": "High capability programming and reasoning predecessor to Claude 3.7."
     },
     "anthropic/claude-3-5-haiku": {
       "provider": "Anthropic",
@@ -73,67 +145,7 @@
       "context_window": 200000,
       "max_output_tokens": 8192,
       "category": "cost_optimized",
-      "description": "Blazing fast execution with coding intelligence rivaling previous-generation frontier models."
-    },
-    "anthropic/claude-3-opus": {
-      "provider": "Anthropic",
-      "model_name": "Claude 3 Opus",
-      "input_cost_per_token": 0.000015,
-      "output_cost_per_token": 0.000075,
-      "input_cost_per_million": 15.0,
-      "output_cost_per_million": 75.0,
-      "context_window": 200000,
-      "max_output_tokens": 4096,
-      "category": "frontier_deep",
-      "description": "Deep qualitative nuance, academic synthesis, and complex enterprise documentation."
-    },
-    "google/gemini-1.5-pro": {
-      "provider": "Google",
-      "model_name": "Gemini 1.5 Pro",
-      "input_cost_per_token": 0.00000125,
-      "output_cost_per_token": 0.000005,
-      "input_cost_per_million": 1.25,
-      "output_cost_per_million": 5.0,
-      "context_window": 2000000,
-      "max_output_tokens": 8192,
-      "category": "flagship",
-      "description": "Massive 2 Million token context window for full-codebase ingest and hours of multi-modal audio/video."
-    },
-    "google/gemini-1.5-flash": {
-      "provider": "Google",
-      "model_name": "Gemini 1.5 Flash",
-      "input_cost_per_token": 0.000000075,
-      "output_cost_per_token": 0.0000003,
-      "input_cost_per_million": 0.075,
-      "output_cost_per_million": 0.3,
-      "context_window": 1000000,
-      "max_output_tokens": 8192,
-      "category": "cost_optimized",
-      "description": "High-frequency sub-second responses at fractional pricing ($0.075 / M input tokens)."
-    },
-    "deepseek/deepseek-chat": {
-      "provider": "DeepSeek",
-      "model_name": "DeepSeek V3 (Chat)",
-      "input_cost_per_token": 0.00000014,
-      "output_cost_per_token": 0.00000028,
-      "input_cost_per_million": 0.14,
-      "output_cost_per_million": 0.28,
-      "context_window": 64000,
-      "max_output_tokens": 8192,
-      "category": "hyper_efficient",
-      "description": "Open-weights Mixture-of-Experts architecture delivering GPT-4o parity at 95% discount."
-    },
-    "deepseek/deepseek-reasoner": {
-      "provider": "DeepSeek",
-      "model_name": "DeepSeek R1 (Reasoner)",
-      "input_cost_per_token": 0.00000055,
-      "output_cost_per_token": 0.00000219,
-      "input_cost_per_million": 0.55,
-      "output_cost_per_million": 2.19,
-      "context_window": 64000,
-      "max_output_tokens": 8192,
-      "category": "reasoning_open",
-      "description": "State-of-the-art open reasoning model matching OpenAI o1 at a fraction of the cost."
+      "description": "Sub-second lightweight execution from Anthropic."
     },
     "mistral/mistral-large": {
       "provider": "Mistral AI",
@@ -145,19 +157,19 @@
       "context_window": 128000,
       "max_output_tokens": 8192,
       "category": "flagship",
-      "description": "European sovereign enterprise model with state-of-the-art multilingual and code synthesis."
+      "description": "European sovereign enterprise frontier model."
     },
     "mistral/codestral": {
       "provider": "Mistral AI",
-      "model_name": "Codestral",
+      "model_name": "Codestral 25.01",
       "input_cost_per_token": 0.0000002,
       "output_cost_per_token": 0.0000006,
       "input_cost_per_million": 0.2,
       "output_cost_per_million": 0.6,
-      "context_window": 32000,
+      "context_window": 256000,
       "max_output_tokens": 8192,
       "category": "code_specialist",
-      "description": "Specialized generative coding and fill-in-the-middle completion model supporting 80+ programming languages."
+      "description": "Specialized generative coding and fill-in-the-middle completion model with 256k context."
     },
     "meta/llama-3.3-70b-instruct": {
       "provider": "Meta (via Groq / Together / DeepInfra)",
@@ -169,19 +181,7 @@
       "context_window": 128000,
       "max_output_tokens": 4096,
       "category": "open_source_cloud",
-      "description": "Top-performing open source weights model with 70B parameters offering 405B level capabilities."
-    },
-    "cohere/command-r-plus": {
-      "provider": "Cohere",
-      "model_name": "Command R+",
-      "input_cost_per_token": 0.0000025,
-      "output_cost_per_token": 0.00001,
-      "input_cost_per_million": 2.5,
-      "output_cost_per_million": 10.0,
-      "context_window": 128000,
-      "max_output_tokens": 4096,
-      "category": "rag_specialist",
-      "description": "Optimized for enterprise search, tool execution, citations, and grounded multi-step workflows."
+      "description": "Open weights standard flagship model with near-405B benchmark parity."
     }
   },
   "automation_platforms": {

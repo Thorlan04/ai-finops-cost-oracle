@@ -25,6 +25,82 @@ OUTPUT_MATRIX_FILE = DOCS_API_DIR / "llm-pricing-matrix.json"
 
 # Key models to map and normalize from LiteLLM database
 MONITORED_MODELS_MAPPING = {
+    # Frontier Hybrid & Extended Reasoning
+    "anthropic.claude-3-7-sonnet-20250219-v1:0": {
+        "canonical_key": "anthropic/claude-3-7-sonnet",
+        "provider": "Anthropic",
+        "name": "Claude 3.7 Sonnet (Hybrid Reasoning)",
+        "category": "frontier_hybrid"
+    },
+    "claude-3-7-sonnet-20250219": {
+        "canonical_key": "anthropic/claude-3-7-sonnet",
+        "provider": "Anthropic",
+        "name": "Claude 3.7 Sonnet (Hybrid Reasoning)",
+        "category": "frontier_hybrid"
+    },
+    "o3-mini": {
+        "canonical_key": "openai/o3-mini",
+        "provider": "OpenAI",
+        "name": "OpenAI o3-mini",
+        "category": "reasoning_ultra"
+    },
+    "o3-mini-2025-01-31": {
+        "canonical_key": "openai/o3-mini",
+        "provider": "OpenAI",
+        "name": "OpenAI o3-mini",
+        "category": "reasoning_ultra"
+    },
+    "o3": {
+        "canonical_key": "openai/o3",
+        "provider": "OpenAI",
+        "name": "OpenAI o3",
+        "category": "reasoning_frontier"
+    },
+    "azure/gpt-4.5-preview": {
+        "canonical_key": "openai/gpt-4-5",
+        "provider": "OpenAI",
+        "name": "GPT-4.5 (Super-Scale Knowledge)",
+        "category": "massive_knowledge"
+    },
+    # Next-Gen Fast Multimodal
+    "gemini-2.0-flash": {
+        "canonical_key": "google/gemini-2-0-flash",
+        "provider": "Google",
+        "name": "Gemini 2.0 Flash",
+        "category": "cost_optimized"
+    },
+    "gemini/gemini-2.0-flash": {
+        "canonical_key": "google/gemini-2-0-flash",
+        "provider": "Google",
+        "name": "Gemini 2.0 Flash",
+        "category": "cost_optimized"
+    },
+    "gemini-2.5-pro": {
+        "canonical_key": "google/gemini-2-5-pro",
+        "provider": "Google",
+        "name": "Gemini 2.5 Pro",
+        "category": "flagship"
+    },
+    # Open Reasoning & Open MoE
+    "deepseek-reasoner": {
+        "canonical_key": "deepseek/deepseek-reasoner",
+        "provider": "DeepSeek",
+        "name": "DeepSeek R1 (Reasoner)",
+        "category": "reasoning_open"
+    },
+    "deepseek/deepseek-reasoner": {
+        "canonical_key": "deepseek/deepseek-reasoner",
+        "provider": "DeepSeek",
+        "name": "DeepSeek R1 (Reasoner)",
+        "category": "reasoning_open"
+    },
+    "deepseek/deepseek-chat": {
+        "canonical_key": "deepseek/deepseek-chat",
+        "provider": "DeepSeek",
+        "name": "DeepSeek V3 (Chat)",
+        "category": "hyper_efficient"
+    },
+    # Predecessor Flagships & Benchmarks
     "gpt-4o": {
         "canonical_key": "openai/gpt-4o",
         "provider": "OpenAI",
@@ -36,18 +112,6 @@ MONITORED_MODELS_MAPPING = {
         "provider": "OpenAI",
         "name": "GPT-4o Mini",
         "category": "cost_optimized"
-    },
-    "o1-preview": {
-        "canonical_key": "openai/o1-preview",
-        "provider": "OpenAI",
-        "name": "OpenAI o1-preview",
-        "category": "reasoning"
-    },
-    "o1-mini": {
-        "canonical_key": "openai/o1-mini",
-        "provider": "OpenAI",
-        "name": "OpenAI o1-mini",
-        "category": "reasoning_light"
     },
     "claude-3-5-sonnet-20241022": {
         "canonical_key": "anthropic/claude-3-5-sonnet",
@@ -61,46 +125,16 @@ MONITORED_MODELS_MAPPING = {
         "name": "Claude 3.5 Haiku",
         "category": "cost_optimized"
     },
-    "claude-3-opus-20240229": {
-        "canonical_key": "anthropic/claude-3-opus",
-        "provider": "Anthropic",
-        "name": "Claude 3 Opus",
-        "category": "frontier_deep"
-    },
-    "gemini/gemini-1.5-pro": {
-        "canonical_key": "google/gemini-1.5-pro",
-        "provider": "Google",
-        "name": "Gemini 1.5 Pro",
-        "category": "flagship"
-    },
-    "gemini/gemini-1.5-flash": {
-        "canonical_key": "google/gemini-1.5-flash",
-        "provider": "Google",
-        "name": "Gemini 1.5 Flash",
-        "category": "cost_optimized"
-    },
-    "deepseek/deepseek-chat": {
-        "canonical_key": "deepseek/deepseek-chat",
-        "provider": "DeepSeek",
-        "name": "DeepSeek V3 (Chat)",
-        "category": "hyper_efficient"
-    },
-    "deepseek/deepseek-reasoner": {
-        "canonical_key": "deepseek/deepseek-reasoner",
-        "provider": "DeepSeek",
-        "name": "DeepSeek R1 (Reasoner)",
-        "category": "reasoning_open"
-    },
     "mistral/mistral-large-2407": {
         "canonical_key": "mistral/mistral-large",
         "provider": "Mistral AI",
         "name": "Mistral Large 2",
         "category": "flagship"
     },
-    "mistral/codestral-2405": {
+    "mistral/codestral-2501": {
         "canonical_key": "mistral/codestral",
         "provider": "Mistral AI",
-        "name": "Codestral",
+        "name": "Codestral 25.01",
         "category": "code_specialist"
     },
     "groq/llama-3.3-70b-versatile": {
@@ -108,12 +142,6 @@ MONITORED_MODELS_MAPPING = {
         "provider": "Meta (via Groq/Cloud)",
         "name": "Llama 3.3 70B Instruct",
         "category": "open_source_cloud"
-    },
-    "command-r-plus": {
-        "canonical_key": "cohere/command-r-plus",
-        "provider": "Cohere",
-        "name": "Command R+",
-        "category": "rag_specialist"
     }
 }
 
