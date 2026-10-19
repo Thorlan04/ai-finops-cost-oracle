@@ -34,7 +34,7 @@
     "digitalocean": {
       "name": "DigitalOcean Droplets & GPUs",
       "category": "hosting",
-      "affiliate_url": "https://m.do.co/c/aifinops-droplet",
+      "affiliate_url": "https://m.do.co/c/bc6cdd45320d",
       "badge": "Enterprise Developer VPS ($200 Credit)",
       "cta_text": "Start on DigitalOcean"
     },
