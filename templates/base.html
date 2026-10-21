@@ -607,11 +607,14 @@
     </div>
   </footer>
 
-  <!-- Embedded Deterministic Pricing Matrix Dataset -->
+  <!-- OWASP Safe JSON Transport -->
+  <script type="application/json" id="finops-pricing-data">{{ pricing_json_inline | safe }}</script>
+  <script type="application/json" id="finops-partners-data">{{ partners_json_inline | safe }}</script>
+  <script type="application/json" id="finops-i18n-data">{{ i18n_json_inline | safe }}</script>
   <script>
-    window.FINOPS_PRICING_DATA = {{ pricing_json_inline }};
-    window.FINOPS_PARTNERS = {{ partners_json_inline }};
-    window.FINOPS_I18N = {{ i18n_json_inline }};
+    window.FINOPS_PRICING_DATA = JSON.parse(document.getElementById('finops-pricing-data').textContent);
+    window.FINOPS_PARTNERS = JSON.parse(document.getElementById('finops-partners-data').textContent);
+    window.FINOPS_I18N = JSON.parse(document.getElementById('finops-i18n-data').textContent);
     window.CURRENT_LANG = "{{ lang }}";
     window.CURRENT_CURRENCY = "USD";
     window.EUR_USD_RATE = 1.08;

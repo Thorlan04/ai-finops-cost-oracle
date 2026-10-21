@@ -316,6 +316,12 @@
   </div>
 
   <script>
+    function sanitizeText(str) {
+      const div = document.createElement('div');
+      div.textContent = str;
+      return div.innerHTML;
+    }
+
     function addNewEntry() {
       const date = document.getElementById('new-date').value;
       const ref = document.getElementById('new-ref').value || 'VIREMENT-SEPA';
@@ -332,9 +338,9 @@
       const tbody = document.getElementById('tbody-recettes');
       const tr = document.createElement('tr');
       tr.innerHTML = `
-        <td>${date}</td>
-        <td><code>${ref}</code></td>
-        <td>${client}</td>
+        <td>${sanitizeText(date)}</td>
+        <td><code>${sanitizeText(ref)}</code></td>
+        <td>${sanitizeText(client)}</td>
         <td>Commissions d'arbitrage FinOps B2B</td>
         <td>Virement SEPA</td>
         <td class="money">$ ${usd.toFixed(2)}</td>

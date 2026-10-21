@@ -16,3 +16,19 @@ venv/
 # OS
 Thumbs.db
 .DS_Store
+
+# Environment & Secrets
+.env
+.env.*
+*.pem
+*.pfx
+secrets/
+
+# Personal Accounting & Confidential Tax Files (Micro-BNC)
+compta_impots/*.csv
+compta_impots/*recettes_perso*.json
+compta_impots/*reel*.json
+compta_impots/releve_*.json
+
+# Logs
+*.log

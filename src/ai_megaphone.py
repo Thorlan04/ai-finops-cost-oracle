@@ -6,6 +6,7 @@ publishes technical briefs to Telegra.ph and triggers Archive.org preservation.
 """
 
 import json
+import os
 import logging
 import urllib.request
 import urllib.error
@@ -172,9 +173,30 @@ def publish_telegraph_brief(pricing_matrix: Dict[str, Any]) -> Optional[str]:
         {"tag": "p", "children": ["Access the full interactive simulator: https://Thorlan04.github.io/ai-finops-cost-oracle/"]}
     ]
 
+    # Dynamic anonymous account generation (zero hardcoded secrets in repository)
+    access_token = os.environ.get("TELEGRAPH_ACCESS_TOKEN")
+    if not access_token:
+        try:
+            create_acc_data = urllib.parse.urlencode({
+                "short_name": "AIFinOps",
+                "author_name": "AI FinOps Cost Oracle",
+                "author_url": "https://Thorlan04.github.io/ai-finops-cost-oracle/"
+            }).encode("utf-8")
+            acc_req = urllib.request.Request("https://api.telegra.ph/createAccount", data=create_acc_data, method="POST")
+            with urllib.request.urlopen(acc_req, timeout=6) as acc_resp:
+                acc_json = json.loads(acc_resp.read().decode("utf-8"))
+                if acc_json.get("ok"):
+                    access_token = acc_json["result"]["access_token"]
+        except Exception as e:
+            logger.info(f"Ephemeral telegraph account creation skipped: {e}")
+
+    if not access_token:
+        logger.info("No telegraph access token available. Skipping brief publication.")
+        return None
+
     create_page_url = "https://api.telegra.ph/createPage"
     telegraph_payload = {
-        "access_token": "d3b25feccb89e508a9114afb82c21413e33389a6fc975bbeaae530e49b81",  # Standard anonymous creation token
+        "access_token": access_token,
         "title": title,
         "author_name": "AI FinOps Cost Oracle",
         "author_url": "https://Thorlan04.github.io/ai-finops-cost-oracle/",
