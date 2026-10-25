@@ -23,7 +23,7 @@ Any workflow running more than 200 tasks per month achieves a positive ROI when 
 ```json
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-10-25T04:10:58.043038+00:00",
+  "generated_at": "2026-10-25T11:05:51.830814+00:00",
   "source": "AI FinOps Cost Oracle Automated Multi-Cloud Engine",
   "base_currency": "USD",
   "eur_usd_rate": 1.08,
