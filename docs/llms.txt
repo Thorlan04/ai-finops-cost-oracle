@@ -3,7 +3,7 @@
 
 AI FinOps Cost Oracle tracks and computes production costs per 1,000,000 tokens across OpenAI, Anthropic Claude, Google Gemini, Mistral AI, DeepSeek, and Meta Llama, alongside cloud automation arbitrage (Zapier vs Make vs self-hosted n8n on Linux VPS).
 
-- Last Official Sync: 2026-10-30T05:18:19.771405+00:00
+- Last Official Sync: 2026-10-30T12:34:30.503162+00:00
 - Public API Endpoint: https://Thorlan04.github.io/ai-finops-cost-oracle/api/v1/llm-pricing-matrix.json
 - Full Detailed Specifications: https://Thorlan04.github.io/ai-finops-cost-oracle/llms-full.txt
 
