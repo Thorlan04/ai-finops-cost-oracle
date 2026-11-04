@@ -23,7 +23,7 @@ Any workflow running more than 200 tasks per month achieves a positive ROI when 
 ```json
 {
   "schema_version": "1.0.0",
-  "generated_at": "2026-11-03T23:05:52.265094+00:00",
+  "generated_at": "2026-11-04T05:47:07.440646+00:00",
   "source": "AI FinOps Cost Oracle Automated Multi-Cloud Engine",
   "base_currency": "USD",
   "eur_usd_rate": 1.08,
@@ -77,8 +77,7 @@ Any workflow running more than 200 tasks per month achieves a positive ROI when 
       "context_window": 128000,
       "max_output_tokens": 16384,
       "category": "massive_knowledge",
-      "description": "Colossal world knowledge and nuanced qualitative synthesis model for mission-critical enterprise decisions.",
-      "last_synced_from": "LiteLLM-Live"
+      "description": "Colossal world knowledge and nuanced qualitative synthesis model for mission-critical enterprise decisions."
     },
     "google/gemini-2-0-flash": {
       "provider": "Google",
